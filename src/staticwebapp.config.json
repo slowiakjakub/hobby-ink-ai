@@ -1,0 +1,11 @@
+{
+    "routes": [
+            {
+                "route": "/api/GetInitialTattooDesigns",
+                "allowedRoles": ["anonymous"]
+              }
+    ],
+    "platform": {
+        "apiRuntime": "node:18"
+      }
+}

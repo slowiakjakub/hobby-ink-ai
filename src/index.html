@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personalizowany Tatuaż Inspirowany Tobą</title>
+</head>
+
+<body>
+    <main>
+        <div style="height: 50px;"></div>
+
+            <form>
+                <div id="initialOnboardingQuestions">
+                    <div id="welcomeScreen">
+                        <span>👋 Welcome to your Tattoo Journey! 🌟 Nice to see you here!</span>
+                        <br />
+                        <br />
+                        <span><b>What We Do: </b>We create initial tattoo concepts designs - tailored just
+                            for you, thanks to cutting-edge technology 🎨💖</span>
+                        <br />
+                        <br />
+                        <button id="welcomeScreenNextButton">Ok! ✨</button>
+                    </div>
+                    <div style="display:none" id="initialTipScreen">
+                        <span><b>💡 Tip: </b>Our designs serve as a <b>starting point</b>, to give you <b>inspirations!</b> Share them with your tattoo artist to make final changes and bring the design into life!</span>
+                        <br />
+                        <br />
+                        <button id="initialTipScreenNextButton">Let's do it!🖤</button>
+                    </div>
+                    <div id="personalityScreen" style="display: none;">
+                        <span>👨 Who are you?👩</span>
+                        <br />
+                        <select name="gender" id="gender">
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                        <br />
+                        <br />
+
+                        <span>🎨 Describe your personality in one word 🌟</span>
+                        <br/>
+                        <select name="personality" id="personality">
+                            <option value="optimistic">Optimistic</option>
+                            <option value="adventurous">Adventurous</option>
+                            <option value="humorous">Humorous</option>
+                            <option value="study prolonger">Perpetual Student</option>
+                            <option value="life enthusiast">Life Enthusiast</option>
+                            <option value="creative">Art Lover</option>
+                            <option value="outgoing">Outgoing</option>
+                            <option value="ambitious">Ambitious</option>
+                            <option value="analytical">Analytical</option>
+                            <option value="peaceful">Peaceful</option>
+                            <option value="introverted">Introverted</option>
+                            <option value="nostalgic">Nostalgic</option>
+                            <option value="spiritual">Spiritual</option>
+                        </select>
+
+                        <br />
+                        <br />
+                        <button id="personalityScreenNextButton">Next</button>
+
+                    </div>
+
+                    <div id="hobby1Screen" style="display: none;">
+
+                        <span>What's the <b>one</b> activity that lights you up?
+                            <br />
+                            <br />
+                            <small>Some examples to inspire you:</small>
+                            <br />
+                            <li>"going to concerts" 🎶</li>
+                            <li>"hiking" 🌄</li>
+                            <li>"cooking" 🍳</li>
+                            <li>"photography" 📷</li>
+                            <li>"football ⚽"</li>
+                            <li>"biking 🚴"</li>
+                            <li>"working out" 🏋️</li>
+                            <li>"meeting friends" 🍻</li>
+                            <li>"playing games" 🎮</li>
+                        </span>
+
+                        <br />
+                        <span>Enter here: </span><input id="hobby1" placeholder="e.g. cooking"/>
+                        <br />
+                        <br />
+
+                        <button id="hobby1ScreenNextButton">Next</button>
+
+                    </div>
+
+                    <div id="hobby2Screen" style="display: none;">
+
+                        <span>Imagine you are in <b>your favorite place.</b> Where is it?
+                            <br />
+                            <br />
+                            <small>Some examples to inspire you:</small>
+                            <br />
+                            <li>"mountains" 🏔️</li>
+                            <li>"beach" 🏖️</li>
+                            <li>"cities" 🏙️</li>
+                            <li>"forests" 🌲</li>
+                            <li>"rooftop bars" 🍸</li>
+                            <li>"gardens" 🌹</li>
+                            <li>"home" 🏠</li>
+                            <li>"countryside" 🌾</li>
+                            <li>"luxury hotel" 🏨</li>
+                            <li>"cafes" ☕</li>
+                        </span>
+
+                        <br />
+                        <span>Enter here: </span><input id="hobby2" placeholder="e.g. mountains"/>
+                        <br />
+                        <br />
+
+                        <button id="hobby2ScreenNextButton">Next</button>
+
+                    </div>
+
+                    <div id="hobby3Screen" style="display: none;">
+
+                        <span> What's <b>one</b> interesting thing/object, that you could potentially see in a tattoo?
+                            <br />
+                            <br />
+                            <small>Some examples to inspire you:</small>
+                            <br />
+                            <li>"book" 📚 (for book lovers)</li>
+                            <li>"pencil" ✏️ (for artists)</li>
+                            <li>"cat" 🐱 (for animal lovers)</li>
+                            <li>"guitar" 🎸(for music enthusiasts)</li>
+                            <li>"laptop" 💻 (for people in tech)</li>
+                            <li>"plant" 🌿 (for nature lovers)</li>
+                            <li>"yoga mat" 🧘 (for those interested in wellness and mindfulness)</li>
+                            <li>"camera" 📷 (for photography enthusiasts)</li>
+                            <li>"burger" 🍔 (for fast food enthusiasts)</li>
+                            <li>"tool" 🛠️ (for DIY enthusiasts)</li>
+                            <li>"headphones" 🎧 (for podcast listeners)</li>
+                        </span>
+                        <br />
+                        <span>Enter here: </span><input id="hobby3" placeholder="e.g. cats"/>
+                        <br />
+                        <br />
+
+                        <button id="generateButton">Start My Tattoo Journey 🌟</button>
+
+                    </div>
+
+                </div>
+
+                <span id="waitingForInitialDesignsFactLabel" style="display: none;">Your journey has begun! We're
+                    sketching the opening scenes right now.</span>
+                <span id="initialDesignsLabel" style="display: none;">Your first waypoints are here! Which initial idea seems appealing to you? (select one) <br/></span>
+                <span id="waitingForSpecificIdeaDesignsLabel" style="display: none;"></span>
+                <span id="specificIdeaDesignsLabel" style="display: none;">Here are the next ones, based on the previous
+                    idea! Which design is calling to you? (select one)<br/></span>
+                <span id="waitingForFinalIdeaDesignsLabel" style="display: none;">We're almost at the final destination!
+                    Let's refine your selected design!<br/></span>
+                <span id="finalDesignsLabel" style="display: none;">You've arrived! Your personal tattoo designs are
+                    here, ready to be part of your life's story.</span>
+                <br />
+
+                <span id="screenshotLabel" style="display:none;">(don't forget to take a screenshot/download of your favorite
+                    design! 😀) <br /><br /> </span>
+
+                <div id="initialIdeasImagesContainer">
+                </div>
+                <span id="generatingLabel" style="display: none;"><b></b><br /><div class="lds-ring"><div></div><div></div><div></div><div></div></div><br />(max. 30 seconds)</span>
+
+            </form>
+
+    </main>
+
+    <script>
+        const generateButton = document.getElementById("generateButton");
+        const generatingLabel = document.getElementById('generatingLabel');
+        const waitingForInitialDesignsFactLabel = document.getElementById('waitingForInitialDesignsFactLabel');
+        const waitingForSpecificIdeaDesignsLabel = document.getElementById('waitingForSpecificIdeaDesignsLabel');
+        const waitingForFinalIdeaDesignsLabel = document.getElementById('waitingForFinalIdeaDesignsLabel');
+        const initialDesignsLabel = document.getElementById('initialDesignsLabel');
+        const specificIdeaDesignsLabel = document.getElementById('specificIdeaDesignsLabel');
+        const finalDesignsLabel = document.getElementById('finalDesignsLabel');
+        const initialOnboardingQuestionsDiv = document.getElementById('initialOnboardingQuestions');
+        const personalityScreenDiv = document.getElementById('personalityScreen');
+        const initialIdeasImagesContainer = document.getElementById('initialIdeasImagesContainer');
+        const screenshotLabel = document.getElementById('screenshotLabel');
+
+        var gender;
+        var personality;
+        var tattooStyle;
+        var hobby1;
+        var hobby2;
+        var hobby3;
+        var mainPayload;
+
+
+
+        (async function () {
+            document.addEventListener("DOMContentLoaded", function () {
+
+                generateButton.addEventListener("click", async function (event) {
+                    event.preventDefault(); // Prevent form submission
+
+                    generateButton.disabled = true;
+                    generatingLabel.style.display = 'inline';
+                    waitingForInitialDesignsFactLabel.style.display = 'inline';
+                    initialOnboardingQuestionsDiv.style.display = 'none';
+                    document.getElementById("hobby3Screen").style.display = "none";
+
+                    // Get form values
+                    gender = document.querySelector("#gender").value;
+                    personality = document.querySelector("#personality").value;
+                    tattooStyle = "minimalistic2d";
+                    hobby1 = document.querySelector("#hobby1").value;
+                    hobby2 = `${document.querySelector("#hobby2").value} scenery`; //we are collecting scenery/favorite place here
+                    hobby3 = `${document.querySelector("#hobby3").value} symbol`; //we are collecting specific symbol here
+
+                    mainPayload = {
+                        gender,
+                        personality,
+                        tattooStyle,
+                        hobby1,
+                        hobby2,
+                        hobby3
+                    };
+
+                    // API call
+                    var fetchedBase64String = fetch("/api/GetInitialTattooDesigns", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(mainPayload)
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("Success getting images:", data);
+
+                            const fetchedImageDescriptors = data.images;
+
+                            const imageElements = fetchedImageDescriptors.map((descriptor) => createImageElement(descriptor, initialIdeasImagesContainer));
+
+                            generateButton.disabled = false;
+                            generatingLabel.style.display = 'none';
+                            waitingForInitialDesignsFactLabel.style.display = 'none';
+                            initialDesignsLabel.style.display = 'inline';
+                        })
+                        .catch((error) => {
+                            console.error("Error when creating image:", error);
+                        });
+
+                });
+            });
+        }());
+
+        // Function to create and insert image elements into the DOM
+        const createImageElement = (imageDescriptor, imagesContainer) => {
+            const img = document.createElement('img');
+            img.src = `data:image/png;base64,${imageDescriptor.base64}`;
+            img.className = "responsive-image";
+            img.addEventListener('click', () => {
+                handleImageClickForInitialDesigns(imageDescriptor, imagesContainer);
+            });
+            imagesContainer.appendChild(img);
+            return img;  // Append the image to the body (or any other container)
+        };
+
+        const createSpecificIdeaImageElement = (imageDescriptor, imagesContainer) => {
+            const img = document.createElement('img');
+            img.src = `data:image/png;base64,${imageDescriptor.base64}`;
+            img.className = "responsive-image";
+            img.addEventListener('click', () => {
+                handleImageClickForSpecificIdeaDesigns(imageDescriptor, imagesContainer);
+            });
+            imagesContainer.appendChild(img);
+            return img;  // Append the image to the body (or any other container)
+        };
+
+
+        const createFinalDesignsImageElement = (imageDescriptor, imagesContainer) => {
+            const img = document.createElement('img');
+            img.src = `data:image/png;base64,${imageDescriptor.base64}`;
+            img.className = "responsive-image";
+            imagesContainer.appendChild(img);
+            return img;  // Append the image to the body (or any other container)
+        };
+
+        const handleImageClickForInitialDesigns = async (imageDescriptor, imagesContainer) => {
+
+            // Remove all child nodes (images) from the container
+            while (imagesContainer.firstChild) {
+                imagesContainer.removeChild(imagesContainer.firstChild);
+            }
+
+            // Append only the clicked image
+            const selectedDesignImg = createSpecificIdeaImageElement(imageDescriptor, imagesContainer);
+            generatingLabel.style.display = 'inline';
+            initialDesignsLabel.style.display = 'none';
+            waitingForSpecificIdeaDesignsLabel.style.display = 'inline';
+            waitingForSpecificIdeaDesignsLabel.innerHTML = `${imageDescriptor.tattooEncouragement} <br/> Let us create some similar designs...<br/> `;
+
+            const payload = {
+                imageDescriptor
+            };
+            const response = await fetch("/api/GetTattooDesignsForSpecificDescription", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    generatingLabel.style.display = 'none';
+                    waitingForSpecificIdeaDesignsLabel.style.display = 'none';
+                    specificIdeaDesignsLabel.style.display = 'inline';
+                    console.log("Success getting images:", data);
+                    const fetchedImageDescriptors = data.images;
+
+                    const imageElements = fetchedImageDescriptors.map((descriptor) => createSpecificIdeaImageElement(descriptor, imagesContainer));
+                    imageElements.forEach(element => {
+                        element.removeE
+                    });
+                });
+
+
+            //const result = await response.json();
+            // Do something with the returned result
+        };
+
+        const handleImageClickForSpecificIdeaDesigns = async (imageDescriptor, imagesContainer) => {
+
+            // Remove all child nodes (images) from the container
+            while (imagesContainer.firstChild) {
+                imagesContainer.removeChild(imagesContainer.firstChild);
+            }
+
+            // Append only the clicked image
+            const selectedDesignImg = createFinalDesignsImageElement(imageDescriptor, imagesContainer);
+            generatingLabel.style.display = 'inline';
+            specificIdeaDesignsLabel.style.display = 'none';
+            waitingForFinalIdeaDesignsLabel.style.display = 'inline';
+
+            const payload = {
+                imageDescriptor
+            };
+
+            const response = await fetch("/api/GetRefinedDesignsFromSpecificDesign", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    generatingLabel.style.display = 'none';
+                    waitingForFinalIdeaDesignsLabel.style.display = 'none';
+                    finalDesignsLabel.style.display = 'inline';
+                    screenshotLabel.style.display = 'inline';
+
+                    console.log("Success getting images:", data);
+                    const fetchedImageDescriptors = data.images;
+
+                    const imageElements = fetchedImageDescriptors.map((descriptor) => createFinalDesignsImageElement(descriptor, imagesContainer));
+                });
+        };
+
+        async function fetchInterestingFactAboutHobbies(payload) {
+            try {
+                const response = await fetch("/api/GetInterestingFactForTwoHobbies", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.text();
+                console.log(`Interesting fact: ${data}`);
+
+                return data;
+            } catch (error) {
+                console.error('There was an error fetching interesting fact!', error);
+            }
+        }
+
+        document.getElementById("welcomeScreenNextButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("welcomeScreen").style.display = "none";
+            document.getElementById("initialTipScreen").style.display = "block";
+        });
+
+        document.getElementById("initialTipScreenNextButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("initialTipScreen").style.display = "none";
+            document.getElementById("personalityScreen").style.display = "block";
+        });
+
+        document.getElementById("personalityScreenNextButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("personalityScreen").style.display = "none";
+            document.getElementById("hobby1Screen").style.display = "block";
+
+        });
+
+        document.getElementById("hobby1ScreenNextButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("hobby1Screen").style.display = "none";
+            document.getElementById("hobby2Screen").style.display = "block";
+        });
+
+        document.getElementById("hobby2ScreenNextButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("hobby2Screen").style.display = "none";
+            document.getElementById("hobby3Screen").style.display = "block";
+        });
+
+
+    </script>
+</body>
+
+</html>
